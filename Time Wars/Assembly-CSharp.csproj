@@ -55,7 +55,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Attacker.cs" />
+     <Compile Include="Assets\Scripts\AttackerSpawner.cs" />
+     <Compile Include="Assets\Scripts\Defender.cs" />
+     <Compile Include="Assets\Scripts\DefenderButton.cs" />
+     <Compile Include="Assets\Scripts\DefenderSpawner.cs" />
+     <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\LevelLoader.cs" />
+     <Compile Include="Assets\Scripts\Projectile.cs" />
+     <Compile Include="Assets\Scripts\Shooter.cs" />
+     <Compile Include="Assets\Scripts\StarDisplay.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/canyi/Desktop/Unity Workspace/Time Wars/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
