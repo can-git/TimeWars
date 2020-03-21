@@ -6,8 +6,8 @@ using UnityEngine;
 public class AttackerSpawner : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] float maxSpawnDelay = 5f;
-    [SerializeField] float minSpawnDelay = 1f;
+    [SerializeField] float maxSpawnDelay = 7f;
+    [SerializeField] float minSpawnDelay = 3f;
     [SerializeField] Attacker attackerPrefab;
     bool spawn = true;
 

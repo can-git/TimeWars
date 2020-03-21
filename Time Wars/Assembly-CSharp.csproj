@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\Shooter.cs" />
      <Compile Include="Assets\Scripts\StarDisplay.cs" />
+     <Compile Include="Assets\Scripts\Trees.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/canyi/Desktop/Unity Workspace/Time Wars/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
