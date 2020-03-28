@@ -8,7 +8,7 @@ public class AttackerSpawner : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] float maxSpawnDelay = 7f;
     [SerializeField] float minSpawnDelay = 3f;
-    [SerializeField] Attacker attackerPrefab;
+    [SerializeField] Attacker[] attackerPrefabArray=null;
     bool spawn = true;
 
     IEnumerator Start()
@@ -20,10 +20,21 @@ public class AttackerSpawner : MonoBehaviour
         }
     }
 
+    public void StopSpawning()
+    {
+        spawn = false;
+    }
+
     private void SpawnAttacker()
     {
-        Quaternion spawnRotation = Quaternion.Euler(0,180, 0);
-        Instantiate(attackerPrefab, transform.position, spawnRotation);
+        var attackerIndex = UnityEngine.Random.Range(0, attackerPrefabArray.Length);
+        Spawn(attackerPrefabArray[attackerIndex]);
+    }
+    private void Spawn(Attacker prefab)
+    {
+        Quaternion spawnRotation = Quaternion.Euler(0, 180, 0);
+        Attacker newAttacker = Instantiate(prefab, transform.position, spawnRotation) as Attacker;
+        newAttacker.transform.parent = transform;
     }
 
 }

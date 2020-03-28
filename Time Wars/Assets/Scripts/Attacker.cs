@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
-    float currentSpeed = 0.6f;
-    
-    void Update()
+    /*void Awake()
     {
-        transform.Translate(Vector2.right * currentSpeed * Time.deltaTime);
+        FindObjectOfType<LevelController>().AttackerSpawned();
     }
-    public void MoveToLeft(float walkSpeed)
+    void OnDestroy()
     {
-        currentSpeed = walkSpeed;
-    }
+        FindObjectOfType<LevelController>().AttackerKilled();
+    }*/
+   
 }

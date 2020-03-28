@@ -112,16 +112,9 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: MoveToLeft
+    functionName: MoveTo
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0.7
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.41666666
-    functionName: Fire
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 20
     intParameter: 0
     messageOptions: 0

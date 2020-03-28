@@ -1,28 +1,59 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] float health = 100;
-    [SerializeField] GameObject body;
+    Animator animator;
+    bool ifBlocked = false;
+   
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
   
     public void DealDamage(float damage)
     {
-        health -= damage;
-
-        StartCoroutine("color");
-
+        if (ifBlocked)
+        {
+            health -= damage / 2;
+        }
+        else
+        {
+            health -= damage;
+        }
+        
+        StartCoroutine(color());
         if (health <= 0)
         {
+            //GetComponent<BoxCollider2D>().enabled = false;
+            //StartCoroutine(die());
+            if(gameObject.tag == "Attacker")
+            {
+                FindObjectOfType<StarDisplay>().AddStars(50);
+            }
             Destroy(gameObject);
         }
     }
 
+    IEnumerator die()
+    {
+        animator.SetTrigger("isDying");
+        yield return new WaitForSeconds(3f);
+        Destroy(gameObject);
+    }
+
     IEnumerator color()
     {
-        body.GetComponent<SpriteRenderer>().color = Color.red;
+        gameObject.transform.Find("Body").GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(0.3f);
-        body.GetComponent<SpriteRenderer>().color = Color.white;
+        gameObject.transform.Find("Body").GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
+    public void isBlocked(bool state)
+    {
+        ifBlocked = state;
     }
 }

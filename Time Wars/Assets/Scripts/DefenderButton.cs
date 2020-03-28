@@ -5,7 +5,7 @@ using UnityEngine;
 public class DefenderButton : MonoBehaviour
 {
 
-    [SerializeField] Defender defenderPrefab;
+    [SerializeField] Defender defenderPrefab=null;
     int Cost = 100;
     int starAmount;
     void Start()

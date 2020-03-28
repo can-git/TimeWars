@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Hero
+  - Attacker
+  - Slider Hero
+  - Slider Enemy
+  - Undefined
+  - Hero Projectile
+  - Attacker Projectile
   layers:
   - Default
   - TransparentFX

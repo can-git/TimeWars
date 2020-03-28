@@ -8,7 +8,7 @@ public class LevelLoader : MonoBehaviour
 {
 
     int currentSceneIndex;
-    [SerializeField] int timeToWait = 4;
+    int timeToWait = 4;
 
     // Start is called before the first frame update
     void Start()
@@ -26,14 +26,24 @@ public class LevelLoader : MonoBehaviour
         LoadNextScene();
     }
 
+    public void LoadYouLose()
+    {
+        SceneManager.LoadScene("Lose Screen");
+    }
+
     public void LoadNextScene()
     {
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void NewGameScene()
     {
-
+        SceneManager.LoadScene("Level 1");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
