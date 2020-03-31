@@ -5,10 +5,21 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
-    int numberOfAttackers = 0;
-    bool levelTimerFinished = false;
+    [SerializeField] GameObject winLabel;
+    [SerializeField] GameObject loseLabel;
+    [SerializeField] AudioSource Sound1;
+    [SerializeField] AudioSource Sound2;
+    //int numberOfAttackers = 0;
 
-    public void AttackerSpawned()
+    void Start()
+    {
+        if (!winLabel) { return; }
+        if (!loseLabel) { return; }
+        winLabel.SetActive(false);
+        loseLabel.SetActive(false);
+    }
+
+    /*public void AttackerSpawned()
     {
         numberOfAttackers++;
     }
@@ -20,19 +31,37 @@ public class LevelController : MonoBehaviour
         {
             
         }
-    }
-    public void LevelTimerFinished()
+    }*/
+    IEnumerator HandleWinCondition()
     {
-        levelTimerFinished = true;
-        StopSpawners();
+        winLabel.SetActive(true);
+        Sound1.Play();
+        yield return new WaitForSeconds(6);
+        FindObjectOfType<LevelLoader>().NewGameScene();
+    }
+    IEnumerator HandleLoseCondition()
+    {
+        loseLabel.SetActive(true);
+        Sound2.Play();
+        yield return new WaitForSeconds(6);
+    }
+    public void LevelSuccessed()
+    {
+        //StopSpawners();
+        StartCoroutine(HandleWinCondition());
+    }
+    public void LevelLoosed()
+    {
+        //StopSpawners();
+        StartCoroutine(HandleLoseCondition());
     }
 
-    private void StopSpawners()
+    /*private void StopSpawners()
     {
         AttackerSpawner[] spawnerArray = FindObjectsOfType<AttackerSpawner>();
         foreach (AttackerSpawner spawner in spawnerArray)
         {
             spawner.StopSpawning();
         }
-    }
+    }*/
 }

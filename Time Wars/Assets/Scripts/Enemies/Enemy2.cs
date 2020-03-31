@@ -13,13 +13,13 @@ public class Enemy2 : MonoBehaviour
             GetComponent<ShooterEnemy>().StopWalking();
         }
     }
-    private void OnTriggerExit2D(Collider2D otherCollider)
-    {
-        GameObject otherObject = otherCollider.gameObject;
+    //private void OnTriggerExit2D(Collider2D otherCollider)
+    //{
+    //    GameObject otherObject = otherCollider.gameObject;
 
-        if (otherObject.GetComponent<Defender>())
-        {
-            GetComponent<ShooterEnemy>().KeepWalking();
-        }
-    }
+    //    if (otherObject.GetComponent<Defender>())
+    //    {
+    //        GetComponent<ShooterEnemy>().KeepWalking();
+    //    }
+    //}
 }

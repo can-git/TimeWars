@@ -43,11 +43,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e90e26644fd974da0a469881fb30ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpawnDelay: 4
-  minSpawnDelay: 8
+  maxSpawnDelay: 0
+  minSpawnDelay: 16
   attackerPrefabArray:
   - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
   - {fileID: -1100761246107309318, guid: dfa6e1b99623a9048b700baa625f586a, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
 --- !u!1 &4476917433717316024
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,11 +96,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e90e26644fd974da0a469881fb30ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpawnDelay: 4
-  minSpawnDelay: 8
+  maxSpawnDelay: 0
+  minSpawnDelay: 16
   attackerPrefabArray:
   - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
   - {fileID: -1100761246107309318, guid: dfa6e1b99623a9048b700baa625f586a, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
 --- !u!1 &4476917433821791923
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,11 +149,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e90e26644fd974da0a469881fb30ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpawnDelay: 3
-  minSpawnDelay: 6
+  maxSpawnDelay: 0
+  minSpawnDelay: 16
   attackerPrefabArray:
   - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
   - {fileID: -1100761246107309318, guid: dfa6e1b99623a9048b700baa625f586a, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
 --- !u!1 &4476917434232514232
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,10 +202,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e90e26644fd974da0a469881fb30ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpawnDelay: 3
-  minSpawnDelay: 6
+  maxSpawnDelay: 0
+  minSpawnDelay: 16
   attackerPrefabArray:
   - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: -1100761246107309318, guid: dfa6e1b99623a9048b700baa625f586a, type: 3}
   - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
 --- !u!1 &4476917434813219209
 GameObject:
@@ -270,8 +288,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e90e26644fd974da0a469881fb30ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpawnDelay: 4
-  minSpawnDelay: 8
+  maxSpawnDelay: 0
+  minSpawnDelay: 16
   attackerPrefabArray:
   - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
   - {fileID: -1100761246107309318, guid: dfa6e1b99623a9048b700baa625f586a, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}
+  - {fileID: 2775458278855851975, guid: ff8216646757b074ca37665f8e63b873, type: 3}

@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c8d1a7a7ea2734e9eca01276ea429b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defenderPrefab: {fileID: 2396487617720565568, guid: e77097f241fb5ae4dad56ad7f86ac633,
+  defenderPrefab: {fileID: 5853842563101351496, guid: b9ea9fb2191b744428a9d21c1b87c7b9,
     type: 3}
 --- !u!1 &1625442202746209640
 GameObject:
@@ -1106,5 +1106,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c8d1a7a7ea2734e9eca01276ea429b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defenderPrefab: {fileID: 2396487617720565568, guid: e77097f241fb5ae4dad56ad7f86ac633,
+  defenderPrefab: {fileID: 8708059554641034412, guid: 132b00049167b714190966e2b603b7af,
     type: 3}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hero3 : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D otherCollider)
+    private void OnTriggerStay2D(Collider2D otherCollider)
     {
         GameObject otherObject = otherCollider.gameObject;
 
@@ -13,5 +13,4 @@ public class Hero3 : MonoBehaviour
             GetComponent<isAttacking>().Attack(otherObject);
         }
     }
-
 }

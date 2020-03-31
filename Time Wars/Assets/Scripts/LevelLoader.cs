@@ -25,12 +25,19 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(timeToWait);
         LoadNextScene();
     }
+    public void LoadStartScene()
+    {
+        SceneManager.LoadScene("Start Screen");
+    }
 
     public void LoadYouLose()
     {
         SceneManager.LoadScene("Lose Screen");
     }
-
+    public void LoadCurrentScene()
+    {
+        SceneManager.LoadScene(currentSceneIndex);
+    }
     public void LoadNextScene()
     {
         SceneManager.LoadScene(currentSceneIndex + 1);

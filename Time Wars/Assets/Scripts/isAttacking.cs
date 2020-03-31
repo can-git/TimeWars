@@ -33,6 +33,7 @@ public class isAttacking : MonoBehaviour
         Health health = currentTarget.GetComponent<Health>();
         if (health)
         {
+            GetComponent<AudioSource>().Play();
             health.DealDamage(damage);
         }
     }

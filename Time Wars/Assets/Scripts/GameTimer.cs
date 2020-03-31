@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class GameTimer : MonoBehaviour
 {
-    [Tooltip("Our level timer in seconds")]
-    [SerializeField] float levelTime = 5;
-    bool triggeredLevelFinished = false;
+    //[Tooltip("Our level timer in seconds")]
+    //[SerializeField] float levelTime = 5;
     Slider slider;
     float maxNum=10f;
     float minNum = 0f;
     float currentNum = 5;
+    bool triggeredLevelFinished = false;
 
     void Start()
     {
@@ -24,14 +24,17 @@ public class GameTimer : MonoBehaviour
 
     void Update()
     {
+        if (triggeredLevelFinished) { return; }
         bool timerFinished = maxNum <= slider.value;
         if (maxNum <= slider.value)
         {
-            FindObjectOfType<LevelLoader>().LoadYouLose();
+            triggeredLevelFinished = true;
+            FindObjectOfType<LevelController>().LevelLoosed();
         }
         if (minNum >= slider.value)
         {
-            FindObjectOfType<LevelController>().LevelTimerFinished();
+            triggeredLevelFinished = true;
+            FindObjectOfType<LevelController>().LevelSuccessed();
         }
     }
     private void UpdateValue()

@@ -14,7 +14,7 @@ public class DamageColldier : MonoBehaviour
         {
             if (otherCollider.tag == "Attacker")
             {
-                //FindObjectOfType<LivesDisplay>().TakeLife();
+                gameObject.GetComponent<AudioSource>().Play();
                 FindObjectOfType<GameTimer>().PrizeForEnemies();
                 GameObject.FindWithTag("Slider Enemy").GetComponent<Animator>().SetTrigger("Attack");
                 GameObject.FindWithTag("Slider Hero").GetComponent<Animator>().SetTrigger("Block");
@@ -25,12 +25,12 @@ public class DamageColldier : MonoBehaviour
         {
             if (otherCollider.tag == "Hero")
             {
+                gameObject.GetComponent<AudioSource>().Play();
                 FindObjectOfType<GameTimer>().PrizeForHeros();
                 GameObject.FindWithTag("Slider Hero").GetComponent<Animator>().SetTrigger("Attack");
                 GameObject.FindWithTag("Slider Enemy").GetComponent<Animator>().SetTrigger("Block");
                 Destroy(otherCollider.gameObject);
             }
         }
-        
     }
 }
