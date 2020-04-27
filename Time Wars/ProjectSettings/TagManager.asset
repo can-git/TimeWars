@@ -11,6 +11,9 @@ TagManager:
   - Undefined
   - Hero Projectile
   - Attacker Projectile
+  - Hero Button
+  - GameMusic
+  - Stone
   layers:
   - Default
   - TransparentFX

@@ -4,13 +4,24 @@ using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
-    /*void Awake()
+    void Start()
     {
-        FindObjectOfType<LevelController>().AttackerSpawned();
+        
+    }
+    void Update()
+    {
+        EffectOnOrClose();
+    }
+    public void EffectOnOrClose()
+    {
+        if (!gameObject.GetComponent<Enemy2>() && !gameObject.GetComponent<Enemy5>())
+        {
+            gameObject.GetComponent<AudioSource>().volume = PlayerPrefsController.GetMasterEffectInt();
+        }
     }
     void OnDestroy()
     {
-        FindObjectOfType<LevelController>().AttackerKilled();
-    }*/
-   
+        if (FindObjectOfType<KillStarDisplay>())
+            FindObjectOfType<KillStarDisplay>().RemoveStars();
+    }
 }

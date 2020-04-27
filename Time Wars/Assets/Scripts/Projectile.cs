@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
 
     void Start()
     {
+        EffectOnOrClose();
         if (gameObject.tag == "Hero Projectile")
         {
             isHero = true;
@@ -18,8 +19,14 @@ public class Projectile : MonoBehaviour
             isHero = false;
         }
     }
+    public void EffectOnOrClose()
+    {
+        gameObject.GetComponent<AudioSource>().volume = PlayerPrefsController.GetMasterEffectInt();
+    }
     void Update()
     {
+        EffectOnOrClose();
+
         if (isHero)
         {
             transform.Translate(Vector2.down * Time.deltaTime * 5);

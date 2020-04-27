@@ -16,7 +16,7 @@ public class GameTimer : MonoBehaviour
     void Start()
     {
         slider = GetComponent<Slider>();
-        slider.value = 5.0f;
+        slider.value = 5.0f + PlayerPrefsController.GetDifficulty()+1;
         maxNum = GetComponent<Slider>().maxValue;
         minNum = GetComponent<Slider>().minValue;
         currentNum = slider.value;

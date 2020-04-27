@@ -7,7 +7,16 @@ public class Defender : MonoBehaviour
 {
     [SerializeField] int starCost = 100;
 
-    
+    void Update()
+    {
+        EffectOnOrClose();
+    }
+    public void EffectOnOrClose()
+    {
+        if(gameObject.tag != "Stone")
+            gameObject.GetComponent<AudioSource>().volume = PlayerPrefsController.GetMasterEffectInt();
+    }
+
     public int GetStarCost()
     {
         return starCost;

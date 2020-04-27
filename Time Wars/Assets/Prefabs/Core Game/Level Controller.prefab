@@ -60,6 +60,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winLabel: {fileID: 0}
   loseLabel: {fileID: 0}
+  optionsPanel:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Sound1: {fileID: 4666238953295068261}
   Sound2: {fileID: 7449275061500135070}
 --- !u!82 &4666238953295068261

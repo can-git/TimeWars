@@ -6,25 +6,50 @@ using UnityEngine;
 public class AttackerSpawner : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] float maxSpawnDelay = 7f;
-    [SerializeField] float minSpawnDelay = 3f;
-    [SerializeField] Attacker[] attackerPrefabArray=null;
+    [SerializeField] public float maxSpawnDelay = 7f;
+    [SerializeField] public float minSpawnDelay = 3f;
+    float maxSpawnDelayDefault;
+    float minSpawnDelayDefault;
+    [SerializeField] Attacker[] attackerPrefabArray = null;
     bool spawn = true;
 
+   
     IEnumerator Start()
     {
-        while(spawn)
+        maxSpawnDelayDefault = maxSpawnDelay;
+        minSpawnDelayDefault = minSpawnDelay;
+        MakeItHardOrEasy(PlayerPrefsController.GetDifficulty());
+        while (spawn)
         {
             yield return new WaitForSeconds(UnityEngine.Random.Range(minSpawnDelay, maxSpawnDelay));
             SpawnAttacker();
         }
     }
 
-    /*public void StopSpawning()
+    public void StopSpawning()
     {
         spawn = false;
-    }*/
+    }
+    public void KeepSpawning()
+    {
+        spawn = true;
+    }
+    private void ReturnDefaults()
+    {
+        maxSpawnDelay = maxSpawnDelayDefault;
+        minSpawnDelay = minSpawnDelayDefault;
+    }
 
+    public void MakeItHardOrEasy(float index)
+    {
+        ReturnDefaults();
+        maxSpawnDelay = maxSpawnDelay - index;
+        minSpawnDelay = minSpawnDelay - index;
+        if(minSpawnDelay <= 0)
+        {
+            minSpawnDelay = 0;
+        }
+    }
     private void SpawnAttacker()
     {
         var attackerIndex = UnityEngine.Random.Range(0, attackerPrefabArray.Length);

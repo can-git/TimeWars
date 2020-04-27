@@ -7,6 +7,7 @@ public class StarDisplay : MonoBehaviour
 {
     [SerializeField] int stars = 100;
     Text starText;
+    bool work = false;
     void Start()
     {
         starText = GetComponent<Text>();
@@ -24,7 +25,11 @@ public class StarDisplay : MonoBehaviour
     }
     public void AddStars(int amount)
     {
-        stars += amount;
+        if (work)
+        {
+            stars += amount;
+        }
+        
         UpdateDisplay();
     }
     public void SpendStars(int amount)
@@ -38,6 +43,10 @@ public class StarDisplay : MonoBehaviour
     public int GetStars()
     {
         return stars;
+    }
+    public void WorkorNot(bool workN)
+    {
+        work = workN;
     }
 
 }
