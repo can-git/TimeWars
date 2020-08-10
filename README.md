@@ -1,7 +1,7 @@
 # TimeWars
 2D Mobile Game with Unity
 
-I have started to this game for the school project and its my first game project. I have learned the content from an Udemy course and many changes have added.
+It is my first game project and I have started to this game for the school project. I have learned the content from an Udemy course and many changes have added rather than the original one.
 
 To see the original project : https://www.udemy.com/course/unitycourse/learn/lecture/12173852#overview
 
